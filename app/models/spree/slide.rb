@@ -4,7 +4,6 @@ class Spree::Slide < ActiveRecord::Base
   belongs_to :product
 
   def initialize(attrs = nil)
-    params.require(:published}
     super
   end
 
