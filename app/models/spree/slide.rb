@@ -1,11 +1,10 @@
 class Spree::Slide < ActiveRecord::Base
   has_attached_file :image
   scope :published, where(:published => true)
-  params.permit(:name, :body, :link_url, :published, :image, :position, :product_id)
   belongs_to :product
 
   def initialize(attrs = nil)
-    attrs ||= {:published => true}
+    params.require(:published}
     super
   end
 
